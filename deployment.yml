@@ -2,10 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nodeapp-deployment
-  labels:
-    app: nodeapp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: nodeapp
@@ -16,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nodeapp
-        image: docker.io/purijala.subramanyam/nodeapp:latest  
+        image: purijala/nodeapp:latest
         ports:
-        - containerPort: 4000                                 
+        - containerPort: 4000
