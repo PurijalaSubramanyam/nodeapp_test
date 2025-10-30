@@ -4,10 +4,9 @@ metadata:
   name: nodeapp-service
 spec:
   selector:
-    app: nodeapp 
+    app: nodeapp
   type: LoadBalancer
   ports:
   - protocol: TCP
     port: 5000
-    targetPort: 3000
-    nodePort: 31110
+    targetPort: 4000
